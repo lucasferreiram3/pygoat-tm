@@ -3,6 +3,12 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
+Modified version of Pygoat hosted [here](https://github.com/adeyosemanputra/pygoat) to python version 3.8.
+Thank you for the learning application!
+
+Purpose: Workshop to demonstrate security for applications at runtime.
+
+
 intentionally vuln web Application Security in django.
 our roadmap build intentionally vuln web Application in django. The Vulnerability can based on OWASP top ten
 <br>
@@ -17,51 +23,24 @@ our roadmap build intentionally vuln web Application in django. The Vulnerabilit
 • A9:2017-Using Components with Known Vulnerabilities<br>
 • A10:2017-Insufficient Logging & Monitoring<br>
 
-Table of Contents
-=================
-
-* [pygoat](#pygoat)
-   * [Installation](#installation)
-      * [From Sources](#from-sources)
-      * [Docker Container](#docker-container)
-      * [Installation Video](#installation-video)
-   * [Solutions](#solutions)
-
 ## Installation
 
-### From Sources
 To setup the project on your local machine:
 <br>
     1. Click on Fork.<br>
     2. Go to your fork and clone the project to your local machine.<br>
-    3. Install the requirements `pip install -r requirements.txt`.<br>
-    4. Apply the migrations `python3 manage.py migrate`.<br>
-    5. Finally, run the development server `python3 manage.py runserver`.<br>
-    
+    3. Run `docker build -t pygoat .` <br>
+    4. Run `docker run --rm -p 8000:8000 pygoat/pygoat`<br>
+    5. Browse to <http://127.0.0.1:8000> 
+<br>
 
 The project will be available at 127.0.0.1:8000.
 
-### Docker Container
-1. Install [Docker](https://www.docker.com)
-2. Run `docker pull pygoat/pygoat`
-3. Run `docker run --rm -p 8000:8000 pygoat/pygoat` or `docker run pygoat/pygoat`
-4. Browse to <http://127.0.0.1:8000> 
-
-### Installation Video
-[![](http://img.youtube.com/vi/rfzQiMeiwso/0.jpg)](http://www.youtube.com/watch?v=rfzQiMeiwso "Installation Pygoat")
 
 ## Solutions 
 <a href="/pygoat/Solutions/solution.md">Challenge solutions</a> •
 </p>    
 
-## Live Demo
-http://pygoat-web.herokuapp.com <br>
-http://pygoat.herokuapp.com <br>
-http://pygoat-dep.herokuapp.com <br>
-credential:<br>
-username : user<br>
-password : user12345<br>
-or you could login with 0auth (google) <br>
 
 ## Contributors ✨
 
