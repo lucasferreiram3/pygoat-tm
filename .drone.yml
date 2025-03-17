@@ -1,0 +1,17 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: pipeline-scan
+  image: veracode/pipeline-scan:latest
+  environment:
+    VERACODE_API_KEY_ID:
+      from_secret: VERACODE_API_KEY_ID
+    VERACODE_API_KEY_SECRET:
+      from_secret: VERACODE_API_KEY_SECRET
+  commands:
+  - zip -r -v upload.zip . -i '*.py' '*.js' '*.html' -x '*.git'
+  - ls -l
+  - java -jar /opt/veracode/pipeline-scan.jar -vid $VERACODE_API_KEY_ID -vkey $VERACODE_API_KEY_SECRET  --file upload.zip
